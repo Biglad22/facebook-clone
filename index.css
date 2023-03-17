@@ -1,5 +1,6 @@
 HTML{
-    font-size:112.5%;
+    font-size:62.5%;
+    -webkit-text-size-adjust: none;
 }
 *{
     box-sizing:border-box;
@@ -15,12 +16,12 @@ body{
     display:block;
     position:relative;
 }
-.box>div{
+.box-content{
     display:block;
     width:fit-content;
     height:fit-content;
     margin:auto auto;
-    zoom:1.3;
+    zoom:1.2;
     position:absolute;
     top:50%;
     left:50%;
@@ -34,11 +35,12 @@ body{
     background-color:#ffff;
     border:1px solid #dddfe2;
     box-shadow:4px 8px 16px rgba(0,0,0,0.10);
+    padding-bottom:24px;
 }
 .form-box > div:nth-child(1){
     display:block;
     text-align:center;
-    font-size:1.11rem;
+    font-size:1.998rem;
     font-family:Helvetica, Arial, sans-serif;
     padding:24px 0 16px 0;
     margin:0;
@@ -57,12 +59,12 @@ body{
 
 .FB-logo{
     display:block;
-    width:13.33rem;
+    width:23.994rem;
     margin:0 auto;
 }
 .input{
     display:block;
-    font-size:1.11rem;
+    font-size:1.998rem;
     line-height:24px;
     font-family:Helvetica, Arial, sans-serif;
     padding:14px;
@@ -93,11 +95,13 @@ body{
 
 .PW{
     padding:0;
-    flex-basis:80%;
+    width:auto;
+    margin:0 auto;
+    margin-left:0;
     flex-shrink:1;
     border:none;
-    font-size:1.11rem;
-    line-height:24px;
+    font-size:1.998rem;
+    line-height:2.4rem;
     color:rgba(0,0,0,0.6);
 }
 .PW::placeholder{
@@ -113,8 +117,8 @@ body{
 }
 
 .input > div{
-    width:40px;
-    height: 24px;
+    width:4rem;
+    height: 2.4rem;
     margin:auto;
     margin-right:0;
     position:relative;
@@ -123,7 +127,7 @@ body{
     display:block;
     width:fit-content;
     height:fit-content;
-    font-size:0.89rem;
+    font-size:1.6rem;
     line-height:0;
     margin:auto;
     position:absolute;
@@ -141,8 +145,8 @@ body{
     display:block;
     margin:16px 0;
     padding:calc((48px - 1.11rem)/2);
-    font-size:1.11rem;
-    line-height:1.11rem;
+    font-size:1.998rem;
+    line-height:1.998rem;
     font-family:Helvetica, Arial, sans-serif;
     font-weight:600;
     width:100%;
@@ -157,7 +161,7 @@ body{
     display:block;
     margin:0;
     margin-bottom:16px;
-    font-size:0.89rem;
+    font-size:1.6rem;
     font-family:Helvetica, Arial, sans-serif;
     background-color:unset;
     color:#1877f2;
@@ -188,10 +192,10 @@ body{
 }
 .NA-button{
     display:block;
-    margin:16px auto;
+    margin:16px auto 0 auto;
     padding:calc((48px - 1.11rem)/2);
-    font-size:1.11rem;
-    line-height:1.11rem;
+    font-size:1.998rem;
+    line-height:1.998rem;
     font-family:Helvetica, Arial, sans-serif;
     font-weight:600;
     width:fit-content;
@@ -213,14 +217,18 @@ footer > div{
     border-bottom:1px solid #dddfe2;
 }
 .langs ol{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
     list-style:none;
     padding:0;
     margin: 8px 0 ;
 }
 .langs > ol > li{
-    display:inline-block;
+    display:block;
     margin-right:8px;
     padding:0;
+    height:2.7rem
 
 }
 
@@ -228,32 +236,50 @@ footer > div{
 .langs > ol > li > a{
     text-decoration:none;
     color:#96999e;
-    font-size:1rem;
-    line-height:1.5rem;
+    font-size:1.8rem;
+    line-height:2.7rem;
     font-family:Helvetica, Arial, sans-serif;
 
 }
-.langs > ol > li:last-child > a{
-    display:block;
-    padding:7px 16px;
+.langs > ol > li:last-child{
     height:fit-content;
-    line-height:0.611rem;
 }
-.langs > ol > li:last-child > a >span{
-    font-size:0.611rem;
+.langs > ol > li:last-child > button{
+    display:block;
+    border:none;
+    padding:0 8px;
+    padding-top:calc((1.8rem - 1.0998rem) /2);
+    padding-bottom:calc((1.8rem - 1.0998rem) /2);
+    border-radius:4px;
+    background-color:#f0f2f5;
+    box-shadow:0 0 2px #96999e67 inset;
+}
+.langs > ol > li:last-child > button >span{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.0998rem;
     font-weight:500;
-    line-height:1;
+    line-height:1.0998rem;
+    color:#96999e;
+}
+
+.langs > ol > li:last-child > button >span:before{
+    font-size:1em; 
+    line-height:1em 
 }
 
 .first-b ol{
+    display:flex;
+    flex-wrap:wrap;
     list-style:none;
     padding:0;
     margin:8px 0;
-    margin-top:16px;
+    margin-top:24px;
 }
 
 .first-b > ol > li{
-    display:inline-block;
+    display:block;
     margin-right:8px;
     padding:0;
 
@@ -263,20 +289,22 @@ footer > div{
 .first-b > ol > li > a{
     text-decoration:none;
     color:#96999e;
-    font-size:1rem;
-    line-height:1.5rem;
+    font-size:1.8rem;
+    line-height:2.7rem;
     font-family:Helvetica, Arial, sans-serif;
 
 }
 
 .sec-b ol{
+    display:flex;
+    flex-wrap:wrap;
     list-style:none;
     padding:0;
     margin:8px 0;
 }
 
 .sec-b > ol > li{
-    display:inline-block;
+    display:block;
     margin-right:8px;
     padding:0;
 
@@ -286,8 +314,46 @@ footer > div{
 .sec-b > ol > li > a{
     text-decoration:none;
     color:#96999e;
-    font-size:1rem;
-    line-height:1.5rem;
+    font-size:1.8rem;
+    line-height:2.7rem;
     font-family:Helvetica, Arial, sans-serif;
 
+}
+
+@media only screen and (max-height:2000px) and (min-height:1200px){
+    .box-content{
+        zoom:1.75;
+    } 
+}
+
+@media only screen and (max-height:1200px) and (min-height:930px){
+    .box-content{
+        zoom:1.5;
+    } 
+}
+
+@media(max-height:700px){
+    .box-content{
+        zoom:normal;
+    } 
+}
+@media(max-width:500px){
+    .box{
+        width:100vw;
+    }
+    .box-content{
+        width:100%;
+    }
+    .form-box{
+        width:100%;
+        box-shadow:none;
+        border-radius:0;
+        border:none;
+        padding-bottom:24px;
+    }
+}
+@media(max-width:390px){
+    HTML{
+        font-size:48%;   
+    }
 }
